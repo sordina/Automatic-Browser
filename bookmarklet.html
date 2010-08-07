@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>Automatic Browser Bookmarklet</title>
+		<script type="text/javascript">
+				var u = "javascript:(function(){document.body.appendChild(document.createElement('script')).src='GOESHERE';})();"
+				var nl = window.location.toString().replace(/\w+.html/,"autobrowse.js")
+				var l = u.replace('GOESHERE',nl)
+
+				function f() {
+					alert(l)
+					document.getElementById("thelink").href = l
+				}
+
+				window.onload = f
+		</script>
+  </head>
+  <body>
+		<h1>Automatic Browser</h1>
+		<p>To lazy to browse on your own?</p>
+		<p>Drop this link into your bookmarks, then click it while browing /b/</p>
+		<p>
+			<a href="." id="thelink">Lurk Moar</a>
+		</p>
+  </body>
+</html>
