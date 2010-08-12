@@ -8,7 +8,7 @@
 function main() {
 	var b = $('body')
 	var points = $("body,html")
-	var y = 0
+	var y = points.scrollTop()
 	var w = $(window).height()
 	var h = b.height() - w
 
