@@ -27,6 +27,7 @@ function main() {
 			$.get(window.location,function(content,code){
 				var c = content.match(RegExp("<body[^>]+>((.|\\n|\\r)*)</body>","m"))[1]
 				b.get(0).innerHTML = c
+				points.scrollTop(0)
 				main()
 			})
 		}
