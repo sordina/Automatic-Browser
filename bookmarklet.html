@@ -3,7 +3,8 @@
     <title>Automatic Browser Bookmarklet</title>
 		<script type="text/javascript">
 				var u = "javascript:(function(){document.body.appendChild(document.createElement('script')).src='GOESHERE';})();"
-				var nl = window.location.toString().replace(/\w+.html/,"autobrowse.js")
+				// Ensure the script is fetched every time by using a random query
+				var nl = window.location.toString().replace(/\w+.html/,"autobrowse.js?" + Math.random())
 				var l = u.replace('GOESHERE',nl)
 
 				function f() {
